@@ -12,11 +12,11 @@ import rev_bit
 argvs = sys.argv
 argc = len(argvs)
 if(argc !=2):
-	print 'Usage: #python %s filename' % argvs[0]
+	print('Usage: #python %s filename' % argvs[0])
 	quit()
 
 #set local value
-SIGNAL_LIB_DIR = "/home/pi/system/settings/format/"
+SIGNAL_LIB_DIR = "./format/"
 LIRCD_CONF = "/etc/lirc/lircd.conf"
 
 ##################################
@@ -27,18 +27,18 @@ try:
 	set_data = json.load(s)
 	data = set_data["data"]
 except ValueError:
-	print 'setting json format error'
+	print('setting json format error')
 	s.close()
 	quit()
 except IOError:
-	print 'No Such File or Directory %s' %(argvs[1])
+	print('No Such File or Directory %s' %(argvs[1]))
 	quit()
 except NameError:
-	print 'Unknown format of setting %s' %(argvs[1])
+	print('Unknown format of setting %s' %(argvs[1]))
 	s.close()
 	quit()
 except :
-	print 'Unexpected error:',sys.exc_info()[0]
+	print('Unexpected error:',sys.exc_info()[0])
 	quit()
 #print json.dumps(set_data,sort_keys = True, indent = 4)
 
@@ -57,7 +57,7 @@ format = json.load(f)
 try:
 	lf = open(LIRCD_CONF,'w')
 except IOError:
-	print 'usage: sudo python %s filename' % argvs[0]
+	print('usage: sudo python %s filename' % argvs[0])
 	quit()
 ##################################
 #convert setting to binary signal
