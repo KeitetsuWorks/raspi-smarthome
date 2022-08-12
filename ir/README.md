@@ -1,6 +1,6 @@
 # remote controller encoder and decoder for Raspberry Pi
 
-## `test_file`
+## `format` and `config`
 
 setting file for `json2signal.py`
 

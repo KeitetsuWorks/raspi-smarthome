@@ -1,0 +1,14 @@
+{
+	"format_id":"National_A75C3026",
+	"data":{
+		"mode":"h",
+		"status":"off",
+		"temperature":22,
+		"strength":"auto",
+		"direction":"auto",
+		"dry":"off",
+		"power":"off",
+		"silent":"off",
+		"smell":"off"
+	}
+}
