@@ -1,15 +1,32 @@
-#ir script description  
-##test_file: test json file for json2signal.py  
+# remote controller encoder and decoder for Raspberry Pi
 
-##aircon.sh  
-script for ir signal generate and send signal by lirc  
+## `format` and `config`
 
-##json2signal.py  
-generator for ir_signal from setting and format json  
-usage sudo python json2signal.py <setting json file>  
-dependency:rev_git.py  
-caution:it will overwrite /etc/lirc/lircd.conf  
+setting file for `json2signal.py`
 
-##decode_ir.py  
-script for decode signal from lirc's script 'mode2' format file  
-dependency:rev_git.py  
+## `aircon.sh`
+
+script for IR signal generation and IR signal transmission by lirc
+
+## `json2signal.py`
+
+script to generate IR signal from setting file  
+usage:
+
+```console
+$ sudo python json2signal.py <setting file>
+```
+
+dependency: `rev_bit.py`  
+caution: it will overwrite `/etc/lirc/lircd.conf`
+
+## `decode_ir.py`
+
+script for decoding IR signal from lirc's script `mode2` format file  
+dependency: `rev_bit.py`
+
+## References
+
+* [Raspberry Pi 3でリモコン信号を解析する (10/1リモコン信号解析結果更新) - スマートホーム構築記](https://kagemomiji.hateblo.jp/entry/2016/09/03/102809)
+* [Raspberry Pi 3でのlirc信号生成スクリプトの作成 - スマートホーム構築記](https://kagemomiji.hateblo.jp/entry/2016/10/02/173010)
+
